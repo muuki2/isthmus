@@ -3,6 +3,8 @@
 **An over-squashing account of AlphaFold's protein–protein interface failures on PINDER.**
 Graph Representation Learning mini-project, TU Wien.
 
+Murat Kolic — matrikelnummer 12551216.
+
 AlphaFold folds each chain confidently but a large fraction of its *complex* predictions are wrong —
 the well-documented "great monomers, weak complexes" regime. Why should placing two well-folded chains
 relative to one another be so much harder than folding each? I reframe this as a property of
