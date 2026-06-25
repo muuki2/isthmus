@@ -1,0 +1,90 @@
+{
+ "n_train": 383,
+ "n_test": 243,
+ "node_features": "ESM2 esm2_t12_35M_UR50D (480-d)",
+ "main_features": "onehot",
+ "feature_sweep": {
+  "baseline": {
+   "in_dim": 3,
+   "none": 0.209,
+   "knn": 0.295,
+   "none_std": 0.007,
+   "knn_std": 0.005,
+   "delta": 0.086
+  },
+  "onehot": {
+   "in_dim": 24,
+   "none": 0.196,
+   "knn": 0.232,
+   "none_std": 0.002,
+   "knn_std": 0.006,
+   "delta": 0.036
+  },
+  "esm32": {
+   "in_dim": 35,
+   "none": 0.201,
+   "knn": 0.202,
+   "none_std": 0.008,
+   "knn_std": 0.003,
+   "delta": 0.001
+  },
+  "esm128": {
+   "in_dim": 131,
+   "none": 0.219,
+   "knn": 0.211,
+   "none_std": 0.005,
+   "knn_std": 0.003,
+   "delta": -0.008
+  },
+  "esm480": {
+   "in_dim": 483,
+   "none": 0.223,
+   "knn": 0.206,
+   "none_std": 0.006,
+   "knn_std": 0.002,
+   "delta": -0.017
+  }
+ },
+ "sweep_crossover": true,
+ "auroc_main": 0.589,
+ "H1_modelled_rho": -0.49,
+ "H1_modelled_p1s": 2.076537802614659e-16,
+ "H1_modelled_ci": [
+  -0.587,
+  -0.387
+ ],
+ "H1_native_rho": -0.114,
+ "H1_native_p": 0.07492966500945696,
+ "MDE": 0.159,
+ "H1_supported": true,
+ "EXP2_rho_within": -0.134,
+ "EXP2_p1s": 1.3455674825359271e-05,
+ "EXP2_ci": [
+  -0.193,
+  -0.07
+ ],
+ "EXP2_frac_neg_slope": 0.568,
+ "EXP2_supported": true,
+ "H2_deltas": {
+  "none": 0.0,
+  "virtual": 0.039,
+  "knn_bipartite": 0.038,
+  "fa": 0.03,
+  "sdrf": 0.035
+ },
+ "H2_supported": true,
+ "sdrf_n_add": 47.68312757201646,
+ "jacobian": {
+  "none": 0.0,
+  "knn_bipartite": 0.047753146907775594,
+  "fa": 0.05783840278737188,
+  "virtual": 0.019036619800313546,
+  "sdrf": 0.017601243472638976
+ },
+ "H3_modelled_rho": -0.473,
+ "H3_modelled_p": 5.566422491999561e-15,
+ "H3_conf_rho": 0.075,
+ "H3_af2_conf_avail": false,
+ "H3_supported": true,
+ "H5_supported": true
+}
