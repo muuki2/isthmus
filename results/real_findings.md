@@ -33,8 +33,8 @@ Cross-interface Jacobian ||dh_A/dx_B|| on the trained models: {'none': '0.00e+00
 - partial rho(low_Neff, skill) = +0.058 (p=0.37)
 - partial rho(flexibility, skill) = -0.034 (p=0.59)
 Modelled-resistance term rho=-0.473 (p=5.6e-15) vs strongest confidence term |rho|=0.075. AF2 complex-confidence (ipTM/PAE) was NOT available from PINDER; so the confidence baseline here is monomer pLDDT (a weaker, but the only available, signal).
-## H5 — generalization on the de-leaked split: **SUPPORTED**
-Skill by MODELLED-resistance tertile (low->high), train vs test: {'train': {0: 0.291, 1: 0.299, 2: 0.334}, 'test': {0: 0.073, 1: 0.035, 2: 0.025}}. Test tertiles monotone-decreasing; counted as supported only when the powered continuous H1 on the same split is significant (yes). The train->test skill drop reflects expected overfitting of the small GIN on 383 systems.
+## H5 — generalization on the de-leaked split: **DIRECTIONAL**
+Skill by MODELLED-resistance tertile (low->high), train vs test: {'train': {0: 0.291, 1: 0.299, 2: 0.334}, 'test': {0: 0.073, 1: 0.035, 2: 0.025}}. Test tertiles show a monotone decline (0.073->0.035->0.025), but with only ~81 systems/tertile and no trend test we read this as directional, not confirmed; the powered continuous within-split H1 is the same claim done properly and IS significant, tying over-squashing to OOD generalization. The train->test skill drop reflects expected overfitting of the small GIN on 383 systems.
 ## Limitations
 - We study AlphaFold's *interface sub-task* with a model we own, not end-to-end DockQ (needs the forbidden inference). Inputs are pose-free; labels are holo-derived and alignment-transferred.
 - **The dissociation is principled:** the modelled bottleneck (what the model routes through) tracks failure, especially within-system (EXP2); the *native* bottleneck need not, because the model never sees the holo geometry. H2/EXP3 show the *causal* effect directly.
