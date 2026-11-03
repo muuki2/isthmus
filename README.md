@@ -913,33 +913,3 @@ repository is made public; note that PINDER, ESM-2 and AlphaFold-DB carry their 
 **Acknowledgements.** PINDER (pinder-org) for the leakage-free benchmark and per-system predicted /
 apo / holo triples; Meta AI for ESM-2; DeepMind / EMBL-EBI for AlphaFold-DB; the PyTorch Geometric and
 biotite maintainers.
-
----
-
-## 16. Repository metadata (GitHub *About* & topics)
-
-**Suggested repo name:** `isthmus` — *Isthmus*
-
-**About (description):**
-
-> Is AlphaFold's "great monomers, weak complexes" failure an over-squashing problem? A causal GNN study
-> of the protein–protein interface bottleneck on PINDER's leakage-free split, finding that
-> over-squashing is contingent on feature richness: cross-chain rewiring helps with weak features
-> (ΔAUPRC +0.086) and hurts with rich ESM2 ones (−0.017).
-
-**Topics:**
-
-`graph-neural-networks` · `over-squashing` · `over-smoothing` · `graph-rewiring` ·
-`effective-resistance` · `curvature` · `message-passing` · `pytorch-geometric` · `alphafold` ·
-`protein-protein-interaction` · `pinder` · `esm2` · `structural-bioinformatics` ·
-`geometric-deep-learning` · `reproducible-research`
-
-**Pitch (for a README preview, talk abstract, or social card):**
-
-> Two well-folded protein chains, joined by a handful of contacts. Every cross-chain signal a GNN needs
-> has to squeeze through that narrow isthmus — the textbook setting for over-squashing. **Isthmus** measures
-> the neck (effective resistance, Jacobian sensitivity), *removes* it (five rewiring operators), and
-> shows on 243 leakage-free PINDER systems that relieving it is causally worth +0.039 AUPRC and halves
-> calibration error. Then it shows the result has a boundary: give each residue a rich enough ESM2
-> embedding and the same rewiring starts to *hurt*. Over-squashing here is not a property of the graph.
-> It is a property of the graph, the task, and how much the features already know.
